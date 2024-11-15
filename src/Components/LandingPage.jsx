@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function LandingPage() {
   return (
@@ -18,9 +19,11 @@ function LandingPage() {
               Challenge yourself with randomly generated quizzes
             </p>
             <section className="pt-[20px] min-w-[75%]">
-              <button className="rounded-xl flex-1 border p-2 min-w-[100%] font-semibold text-[#0b192c] hover:bg-[#f1d38e] bg-[#FFD369]">
-                Let's Get Started
-              </button>
+              <Link to={"/app"}>
+                <button className="rounded-xl flex-1 border p-2 min-w-[100%] font-semibold text-[#0b192c] hover:bg-[#f1d38e] bg-[#FFD369]">
+                  Let's Get Started
+                </button>
+              </Link>
             </section>
           </section>
         </section>
