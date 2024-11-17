@@ -17,13 +17,14 @@ const QuizCard = memo(({ obj }) => {
     () => shuffle([obj?.correct_answer, ...obj?.incorrect_answers]),
     [obj]
   );
+
   const correctAnswer = obj?.correct_answer;
 
   return (
     <>
       <div className="flex flex-col justify-center items-center min-h-screen min-w-[100%] text-xl gap-3 p-4">
         <Score />
-        <section className="text-[#0b192c]  bg-[#FFD369] min-w-[50%]  min-h-[75%] p-[32px] rounded-md flex flex-col">
+        <section className="text-[#0b192c]  bg-[#FFD369] min-w-[50%]  min-h-[75%] p-[32px] rounded-md flex flex-col border-[3px] border-white">
           {/* <p>{obj.category}</p> */}
 
           <h1 className="rounded-md bg-white max-w-[100%] p-2">
