@@ -1,8 +1,8 @@
-import React, { memo, useContext, useEffect, useState } from "react";
+import React, { memo, useContext, useEffect, useMemo, useState } from "react";
 import QuizCard from "./QuizCard";
 import results from "../constants";
-import Pagination from "./Pagination";
 import pageContext from "../PageContext.js";
+
 const QuizApp = () => {
   //   const [questions, setQuestions] = useState([]);
   const { currentPage } = useContext(pageContext);
@@ -18,7 +18,11 @@ const QuizApp = () => {
   //   }, []);
 
   const questions = results[currentPage];
-
+  // const result = shuffle([
+  //   questions?.correct_answer,
+  //   ...questions?.incorrect_answers,
+  // ]);
+  // // const obj = useMemo(result, []);
   return (
     <>
       <div
@@ -29,7 +33,6 @@ const QuizApp = () => {
         {/* {questions?.map((obj) => (
           <QuizCard key={obj.question} obj={obj} />
         ))} */}
-
         <QuizCard obj={questions} />
       </div>
     </>

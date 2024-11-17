@@ -13,7 +13,7 @@ const Pagination = () => {
   };
 
   return (
-    <div className="flex justify-center items-center gap-4 pt-[72px] text-[20px] text-white font-medium">
+    <div className="flex justify-center items-center gap-4 pt-[54px] text-[20px] text-white font-medium">
       {/* <div>
             <label>Enter rows to display: </label>
             <input type="number" className="border border-black outline-none" />

@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import he from "he";
+import scoreContext from "../ScoreContext";
 
 function OptionComponent({ value, variant, onClick }) {
   const variants = {
@@ -33,8 +34,15 @@ function OptionComponent({ value, variant, onClick }) {
 
 function Options({ value, correctAnswer }) {
   const [tick, setTick] = useState(false);
+  const { setScore } = useContext(scoreContext);
+
   const handleTick = () => {
     setTick(true);
+    if (correctAnswer == value) {
+      setScore((e) => e + 1);
+    } else {
+      setScore((e) => e - 1);
+    }
   };
 
   useEffect(() => {
